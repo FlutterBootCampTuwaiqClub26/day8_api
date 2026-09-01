@@ -2,7 +2,14 @@
 
 A Flutter app that fetches Disney characters from a public API and displays them in a grid.
 
+## App Screen
+
+<img width="500" height="832" alt="image" src="https://github.com/user-attachments/assets/3def1dbe-f970-4225-9e14-26cb2b265b3e" />
+
+
 ## `Api` class (`lib/service/api.dart`)
+
+
 
 Handles all communication with the API — fetching and parsing the character data.
 
@@ -150,7 +157,6 @@ class CharactersScreen extends StatelessWidget {
 ```
 
 **Key concepts:**
-- **`StatelessWidget`** — no manual state management needed here; `FutureBuilder` handles the loading/done states for us.
 - **`FutureBuilder`** — rebuilds its UI automatically based on a `Future`'s status (`waiting` → `done`).
 - **`ConnectionState`** — tells us where the `Future` currently is: `waiting` (in progress) or `done` (finished).
 - **`GridView.builder`** — builds grid items lazily (only what's visible), which is efficient for long lists.
